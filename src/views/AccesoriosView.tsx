@@ -150,10 +150,10 @@ function AccessoryCard({
         <div className="flex items-center justify-between">
           <div>
             {product.originalPrice && (
-              <span className="text-xs text-primary-400 line-through block">${product.originalPrice.toFixed(2)}</span>
+              <span className="text-xs text-primary-400 line-through block">S/ {product.originalPrice.toFixed(2)}</span>
             )}
             <span className={`font-bold text-sm ${product.originalPrice ? 'text-red-600' : 'text-foreground'}`}>
-              ${product.price.toFixed(2)}
+              S/ {product.price.toFixed(2)}
             </span>
           </div>
           <button

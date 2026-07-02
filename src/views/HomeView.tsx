@@ -192,10 +192,10 @@ function ProductCard({
           <div>
             {product.originalPrice && (
               <span className="text-sm text-primary-400 line-through mr-2">
-                ${product.originalPrice.toFixed(2)}
+                S/ {product.originalPrice.toFixed(2)}
               </span>
             )}
-            <span className="font-semibold">${product.price.toFixed(2)}</span>
+            <span className="font-semibold">S/ {product.price.toFixed(2)}</span>
           </div>
 
           <button

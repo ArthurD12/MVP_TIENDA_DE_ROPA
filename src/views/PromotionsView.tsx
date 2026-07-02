@@ -133,7 +133,7 @@ export function PromotionsView() {
                     <span className="text-sm text-primary-400 line-through block">
                       ${product.originalPrice?.toFixed(2)}
                     </span>
-                    <span className="text-lg font-bold text-red-600">${product.price.toFixed(2)}</span>
+                    <span className="text-lg font-bold text-red-600">S/ {product.price.toFixed(2)}</span>
                   </div>
 
                   <button

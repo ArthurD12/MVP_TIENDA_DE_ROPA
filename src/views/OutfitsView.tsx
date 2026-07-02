@@ -131,7 +131,7 @@ export function OutfitsView() {
                               <img src={item.image} alt={item.name} className="w-12 h-12 object-cover rounded-lg" />
                               <div className="flex-1 min-w-0">
                                 <p className="text-xs font-medium truncate">{item.name}</p>
-                                <p className="text-xs text-primary-500">${item.price.toFixed(2)}</p>
+                                <p className="text-xs text-primary-500">S/ {item.price.toFixed(2)}</p>
                               </div>
                             </div>
                           ))}
@@ -142,11 +142,11 @@ export function OutfitsView() {
                     <div className="flex items-center justify-between pt-6 border-t border-primary-200">
                       <div>
                         <span className="text-sm text-primary-400 line-through">
-                          ${outfit.originalPrice.toFixed(2)}
+                          S/ {outfit.originalPrice.toFixed(2)}
                         </span>
-                        <span className="ml-2 text-2xl font-semibold">${outfit.price.toFixed(2)}</span>
+                        <span className="ml-2 text-2xl font-semibold">S/ {outfit.price.toFixed(2)}</span>
                         <span className="ml-2 text-sm text-green-600 font-medium">
-                          Ahorras ${(outfit.originalPrice - outfit.price).toFixed(2)}
+                          Ahorras S/ {(outfit.originalPrice - outfit.price).toFixed(2)}
                         </span>
                       </div>
 

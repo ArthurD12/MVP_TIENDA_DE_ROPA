@@ -75,7 +75,7 @@ export function ProductsView() {
       colors: p.colors,
     };
     addItem(asProduct);
-    showToast(`${p.name} añadido al carrito`, 'success');
+    showToast(`{p.name} añadido al carrito`, 'success');
   };
 
   return (
@@ -316,9 +316,9 @@ export function ProductsView() {
                         <div className="flex items-center justify-between mt-1">
                           <div>
                             {product.originalPrice && (
-                              <span className="text-xs text-primary-400 line-through mr-1">${product.originalPrice.toFixed(2)}</span>
+                              <span className="text-xs text-primary-400 line-through mr-1">S/ {product.originalPrice.toFixed(2)}</span>
                             )}
-                            <span className="font-semibold text-sm">${product.price.toFixed(2)}</span>
+                            <span className="font-semibold text-sm">S/ {product.price.toFixed(2)}</span>
                           </div>
                           <button
                             onClick={() => handleAddToCart(product)}

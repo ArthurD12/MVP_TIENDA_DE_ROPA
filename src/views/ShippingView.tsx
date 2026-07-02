@@ -118,18 +118,16 @@ export function ShippingView() {
                   <div key={step.id} className="flex items-start gap-4 relative">
                     {index < 3 && (
                       <div
-                        className={`absolute left-5 top-10 bottom-0 w-0.5 ${
-                          step.completed ? 'bg-green-500' : 'bg-primary-200'
-                        }`}
+                        className={`absolute left-5 top-10 bottom-0 w-0.5 ${step.completed ? 'bg-green-500' : 'bg-primary-200'
+                          }`}
                       />
                     )}
 
                     <div
-                      className={`relative z-10 flex items-center justify-center w-10 h-10 rounded-full ${
-                        step.completed
+                      className={`relative z-10 flex items-center justify-center w-10 h-10 rounded-full ${step.completed
                           ? 'bg-green-500 text-white'
                           : 'bg-primary-200 text-primary-400'
-                      } ${step.current ? 'ring-4 ring-green-100' : ''}`}
+                        } ${step.current ? 'ring-4 ring-green-100' : ''}`}
                     >
                       <step.icon className="w-5 h-5" />
                     </div>
@@ -159,14 +157,14 @@ export function ShippingView() {
             {
               icon: Package,
               title: 'Envio Gratis',
-              description: 'En pedidos superiores a $150',
+              description: 'En pedidos superiores a S/ 150',
               detail: '5-7 dias habiles',
             },
             {
               icon: Truck,
               title: 'Envio Express',
               description: 'Disponible en ciudades principales',
-              detail: '2-3 dias habiles - $15.99',
+              detail: '2-3 dias habiles - S/ 15.99',
             },
             {
               icon: MapPin,

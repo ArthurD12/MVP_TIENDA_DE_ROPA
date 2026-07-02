@@ -50,7 +50,7 @@ function PaymentModal({
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(accountNumber.replace(/\s/g, '')).catch(() => {});
+    navigator.clipboard.writeText(accountNumber.replace(/\s/g, '')).catch(() => { });
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -76,7 +76,7 @@ function PaymentModal({
         <div className="flex items-center justify-between px-6 py-5 border-b border-primary-200">
           <div>
             <h2 className="text-lg font-semibold">Opciones de Pago</h2>
-            <p className="text-sm text-primary-500 mt-0.5">Total: <span className="font-semibold text-foreground">${total.toFixed(2)}</span></p>
+            <p className="text-sm text-primary-500 mt-0.5">Total: <span className="font-semibold text-foreground">S/ {total.toFixed(2)}</span></p>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-primary-50 rounded-lg transition-colors">
             <X className="w-5 h-5" />
@@ -89,14 +89,12 @@ function PaymentModal({
             <div key={m.id} className="border border-primary-200 rounded-xl overflow-hidden">
               <button
                 onClick={() => setActiveMethod(activeMethod === m.id ? m.id : m.id)}
-                className={`flex items-center justify-between w-full px-4 py-3.5 text-left transition-colors ${
-                  activeMethod === m.id ? 'bg-primary-50' : 'hover:bg-primary-50/60'
-                }`}
+                className={`flex items-center justify-between w-full px-4 py-3.5 text-left transition-colors ${activeMethod === m.id ? 'bg-primary-50' : 'hover:bg-primary-50/60'
+                  }`}
               >
                 <div className="flex items-center gap-3">
-                  <div className={`w-4 h-4 rounded-full border-2 flex-shrink-0 transition-colors ${
-                    activeMethod === m.id ? 'border-foreground bg-foreground' : 'border-primary-300'
-                  }`}>
+                  <div className={`w-4 h-4 rounded-full border-2 flex-shrink-0 transition-colors ${activeMethod === m.id ? 'border-foreground bg-foreground' : 'border-primary-300'
+                    }`}>
                     {activeMethod === m.id && (
                       <div className="w-full h-full rounded-full scale-50 bg-white" />
                     )}
@@ -183,9 +181,8 @@ function PaymentModal({
                           </div>
                           <button
                             onClick={handleCopy}
-                            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                              copied ? 'bg-green-100 text-green-700' : 'bg-white border border-primary-200 text-primary-600 hover:border-foreground hover:text-foreground'
-                            }`}
+                            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${copied ? 'bg-green-100 text-green-700' : 'bg-white border border-primary-200 text-primary-600 hover:border-foreground hover:text-foreground'
+                              }`}
                           >
                             {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                             {copied ? 'Copiado' : 'Copiar'}
@@ -216,7 +213,7 @@ function PaymentModal({
             ) : (
               <>
                 <CreditCard className="w-5 h-5" />
-                Confirmar Pedido · ${total.toFixed(2)}
+                Confirmar Pedido · S/ {total.toFixed(2)}
               </>
             )}
           </button>
@@ -275,7 +272,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                     <p className="text-xs text-primary-500 mt-0.5">
                       {item.size}{item.color ? ` • ${item.color}` : ''}
                     </p>
-                    <p className="text-sm font-semibold mt-1">${item.product.price.toFixed(2)}</p>
+                    <p className="text-sm font-semibold mt-1">S/ {item.product.price.toFixed(2)}</p>
 
                     <div className="flex items-center gap-2 mt-2">
                       <button
@@ -311,15 +308,15 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-primary-500">Subtotal</span>
-                <span className="font-medium">${subtotal.toFixed(2)}</span>
+                <span className="font-medium">S/ {subtotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-primary-500">IVA (16%)</span>
-                <span className="font-medium">${tax.toFixed(2)}</span>
+                <span className="font-medium">S/ {tax.toFixed(2)}</span>
               </div>
               <div className="flex justify-between pt-2 border-t border-primary-200 text-lg font-semibold">
                 <span>Total</span>
-                <span>${total.toFixed(2)}</span>
+                <span>S/{total.toFixed(2)}</span>
               </div>
             </div>
 
