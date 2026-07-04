@@ -11,11 +11,10 @@ import {
 } from 'lucide-react';
 
 interface ProfileViewProps {
-  onViewChange?: (view: string) => void;
   initialTab?: ProfileTabType;
 }
 
-export function ProfileView({ onViewChange: _onViewChange, initialTab }: ProfileViewProps) {
+export function ProfileView({ initialTab }: ProfileViewProps) {
   const { user, updateUser } = useAuth();
   const { showToast } = useToast();
   const [activeTab, setActiveTab] = useState<ProfileTabType>(initialTab || 'data');
